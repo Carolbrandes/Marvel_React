@@ -1,6 +1,37 @@
-.container {
- @media screen and (min-width:1200px) {
-   
- }
+@import "./variables.scss";
+
+.banner {
+  background-image: url(../public/images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 612px;
+  position: relative;
 }
 
+.h1 {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 45px;
+  line-height: 60px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -10vh;
+  left: 20px;
+  width: 200px;
+
+  @media screen and (min-width: $md) {
+    width: 400px;
+    bottom: 1vh;
+    left: 100px;
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  @media screen and (min-width: $xl) {
+    width: 592px;
+    bottom: -7vh;
+    left: 140px;
+    font-size: 100px;
+    line-height: 135px;
+  }
+}

@@ -31,16 +31,14 @@
       flex-direction: row;
       justify-content: space-between;
       opacity: 1;
-      width: 60%;
+      max-width: 429px;
       height: auto;
       position: static;
       padding: 0;
      
     }
 
-    @media screen and (min-width: $xl) {
-      width: 40%;
-    }
+   
 
     a {
       color: #fff;
