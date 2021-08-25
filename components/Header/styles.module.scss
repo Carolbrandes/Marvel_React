@@ -1,0 +1,84 @@
+@import "../../styles/variables.scss";
+
+.header {
+  background-color: #000000;
+}
+
+.nav {
+  padding: 43px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu {
+  &Links {
+    display: none;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: -9px;
+    top: 22vh;
+    background-color: black;
+    padding: 20px;
+    flex-direction: column;
+    
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      opacity: 1;
+      width: 60%;
+      height: auto;
+      position: static;
+      padding: 0;
+     
+    }
+
+    @media screen and (min-width: $xl) {
+      width: 40%;
+    }
+
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: 0.3s;
+      padding-bottom: 30px;
+
+      &:hover {
+        color: $red;
+      }
+
+      @media screen and (min-width: $md) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &Icon {
+    @media screen and (min-width: $md) {
+      display: none;
+    }
+  }
+}
+
+.menuActive {
+  display: flex;
+  animation: fadeIn forwards;
+  animation-duration: 2s;
+}
+
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+

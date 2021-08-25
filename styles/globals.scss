@@ -1,0 +1,74 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: Open Sans;
+  src: url(../public/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url(../public/fonts/Open_Sans/OpenSans-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url(../public/fonts/Open_Sans/OpenSans-SemiBold.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url(../public/fonts/Oswald/static/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url(../public/fonts/Oswald/static/Oswald-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url(../public/fonts/Oswald/static/Oswald-Medium.ttf);
+  font-weight: 500;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Open Sans;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  width: 95%;
+  margin-inline: auto;
+
+  @media screen and (min-width: $md) {
+    width: calc($md - 40px);
+  }
+
+  @media screen and (min-width: $xl) {
+    width: calc($xl - 40px);
+  }
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.medium{
+  font-weight: 500;
+}
+
+
