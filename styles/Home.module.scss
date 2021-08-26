@@ -28,15 +28,47 @@
   @media screen and (min-width: $xl) {
     width: 592px;
     bottom: -7vh;
-    
+
     font-size: 100px;
     line-height: 135px;
   }
 }
 
-.section{
+.section {
   padding: 150px 0;
   position: relative;
 }
 
+.sectionWhite {
+  background-color: #fff;
+}
 
+.characterWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pagesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pages {
+  color: #9b9b9b;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.pageSelected {
+  background: $red;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+.personagem{
+    width: 170px;
+    margin-bottom: 40px;
+}
+
+.image{
+  width: 100%;
+  height: 193px;
+  background-size: cover;
+  border-bottom: 5px solid $red;
+  background-image: url(../../public/images/marvel.png);
+  background-position-x: center;
+}
+
+.nome{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 20px;
+}

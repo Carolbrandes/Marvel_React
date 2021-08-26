@@ -56,7 +56,7 @@ export class Carousel extends Component {
     return (
       <div className={styles.wrapperCarousel}>
         <div className={styles.carouselControls}>
-          <h2 className={`${styles.h2} center-mobile`}>
+          <h2 className="center-mobile h2">
             Personagens em destaque
           </h2>
 

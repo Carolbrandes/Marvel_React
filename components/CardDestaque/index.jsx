@@ -1,3 +1,4 @@
+import { TagMovies } from "../TagMovies";
 import styles from "./styles.module.scss";
 
 export const CardDestaque = ({foto, nome}) => {
@@ -7,7 +8,7 @@ export const CardDestaque = ({foto, nome}) => {
   };
   return (
     <div className={styles.bgImage} style={bg}>
-      <p className={styles.tag}>Movies</p>
+     <TagMovies />
       <p className={styles.name}>{nome}</p>
     </div>
   );

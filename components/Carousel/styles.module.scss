@@ -20,23 +20,16 @@
   }
 }
 
-.h2 {
-  color: #fff;
-  font-family: Oswald;
-  font-size: 28px;
-  text-transform: uppercase;
-}
+.arrows {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
 
-.arrows{
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @media screen and (min-width: $md) {
-        position: static;
-        transform: translateX(0);
-    }
+  @media screen and (min-width: $md) {
+    position: static;
+    transform: translateX(0);
+  }
 }
 
 .button {

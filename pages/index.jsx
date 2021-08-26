@@ -1,9 +1,57 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { Carousel } from "../components/Carousel";
+import { GET_CHARACTERS, GET_CHARACTERS_OFFSET } from "../api";
 
 import styles from "../styles/Home.module.scss";
+import { CardPersonagem } from "../components/CardPersonagem";
 
 export default function Home() {
+  const [characters, setCharacters] = useState({});
+  const [pageSelected, setPageSelected] = useState(1);
+  const [pages, setPages] = useState([]);
+ 
+
+  const renderPagination = (numberOfPages) => {
+    if (numberOfPages > 0) {
+      const arrayPages = [];
+      for (let i = 1; i <= numberOfPages; i++) {
+        arrayPages.push(i);
+      }
+      setPages(arrayPages);
+    }
+  };
+
+  const getCharactersByPage = (number) => {
+    let offset;
+
+    setPageSelected(number);
+
+    if (number === 1) {
+      offset = 0;
+    }
+
+    if (number !== 1) {
+      offset = 20 * (number - 1) + (number - 2);
+    }
+
+    GET_CHARACTERS_OFFSET(offset).then((response) => setCharacters(response));
+  };
+
+  useEffect(() => {
+    const getCharacters = () => {
+      GET_CHARACTERS().then((response) => {
+        setCharacters(response);
+        let numberPages = Math.ceil(response.total / response.limit)
+        renderPagination(numberPages);
+      });
+    };
+
+    getCharacters();
+  }, []);
+
+ 
+
   return (
     <>
       <Head>
@@ -31,13 +79,44 @@ export default function Home() {
 
       <section className={styles.section}>
         <div className="container">
-         
-
           <Carousel />
         </div>
       </section>
 
-      <section className={styles.section}></section>
+      <section className={`${styles.section} ${styles.sectionWhite}`}>
+        <div className="container">
+          <h2 className="h2Black">Lista de Personagens da Marvel</h2>
+
+          {characters && characters.results && (
+            <>
+              <div className={styles.characterWrapper}>
+                {characters.results.map((character) => (
+                  <CardPersonagem
+                    key={character.id}
+                    nome={character.name}
+                    foto={character.thumbnail.path}
+                  />
+                ))}
+              </div>
+
+              <div className={styles.pagesWrapper}>
+                {
+                  pages.map((page) => (
+                    <span
+                      onClick={() => getCharactersByPage(page)}
+                      className={`${styles.pages} ${
+                        pageSelected === page ? styles.pageSelected : ""
+                      }`}
+                      key={page}
+                    >
+                      {page}
+                    </span>
+                  ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
     </>
   );
 }
