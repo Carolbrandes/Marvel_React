@@ -11,7 +11,9 @@ export default function Home() {
   const [characters, setCharacters] = useState({});
   const [pageSelected, setPageSelected] = useState(1);
   const [pages, setPages] = useState([]);
- 
+  const [totalPages, setTotalPages] = useState(0);
+  const [startPage, setStartPage] = useState(0);
+  const [endPage, setEndPage] = useState(5);
 
   const renderPagination = (numberOfPages) => {
     if (numberOfPages > 0) {
@@ -22,6 +24,8 @@ export default function Home() {
       setPages(arrayPages);
     }
   };
+
+  const slicePages = () => pages.slice(startPage, endPage);
 
   const getCharactersByPage = (number) => {
     let offset;
@@ -39,19 +43,29 @@ export default function Home() {
     GET_CHARACTERS_OFFSET(offset).then((response) => setCharacters(response));
   };
 
+  const getMorePages = () => {
+    setStartPage((current) => current + 5)
+    setEndPage((current) => current + 5)
+  }
+
+  const backToFirstPage = () => {
+    setStartPage(0)
+    setEndPage(5)
+    getCharactersByPage(1)
+  }
+
   useEffect(() => {
     const getCharacters = () => {
       GET_CHARACTERS().then((response) => {
         setCharacters(response);
-        let numberPages = Math.ceil(response.total / response.limit)
+        let numberPages = Math.ceil(response.total / response.limit);
+        setTotalPages(numberPages);
         renderPagination(numberPages);
       });
     };
 
     getCharacters();
   }, []);
-
- 
 
   return (
     <>
@@ -101,18 +115,26 @@ export default function Home() {
               </div>
 
               <div className={styles.pagesWrapper}>
-                {
-                  pages.map((page) => (
-                    <span
-                      onClick={() => getCharactersByPage(page)}
-                      className={`${styles.pages} ${
-                        pageSelected === page ? styles.pageSelected : ""
-                      }`}
-                      key={page}
-                    >
-                      {page}
-                    </span>
-                  ))}
+              {startPage !== 0 && <span onClick={backToFirstPage}
+                    className={`${styles.pages} ${
+                      pageSelected === 1 ? styles.pageSelected : ""
+                    }`}>1</span>}
+                {slicePages().map((page) => (
+                  <span
+                    onClick={() => getCharactersByPage(page)}
+                    className={`${styles.pages} ${
+                      pageSelected === page ? styles.pageSelected : ""
+                    }`}
+                    key={page}
+                  >
+                    {page}
+                  </span>
+                ))}
+                <span onClick={getMorePages} className={styles.pages}>...</span>
+               <span onClick={() => getCharactersByPage(totalPages)}
+                    className={`${styles.pages} ${
+                      pageSelected === totalPages ? styles.pageSelected : ""
+                    }`}>{totalPages}</span>
               </div>
             </>
           )}
@@ -124,10 +146,12 @@ export default function Home() {
           <h2 className="h2Big">Marvel Mastercard</h2>
           <p className="text">Desbloqueie seus super poderes</p>
           <div className={styles.imgMastercard}>
-          <img src="./images/cards-fan-desktop.png" alt="#" />
+            <img src="./images/cards-fan-desktop.png" alt="#" />
           </div>
           <Button width={324}>Cadastre-se agora</Button>
-          <a className={styles.link} href="#">Entenda como funciona</a>
+          <a className={styles.link} href="#">
+            Entenda como funciona
+          </a>
         </div>
       </section>
     </>
