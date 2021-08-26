@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .header {
-  background-color: #000000;
+  background-color: $black;
 }
 
 .nav {
@@ -21,7 +21,7 @@
     position: absolute;
     left: -9px;
     top: 22vh;
-    background-color: black;
+    background-color: $black;
     padding: 20px;
     flex-direction: column;
     
@@ -41,7 +41,7 @@
    
 
     a {
-      color: #fff;
+      color: $white;
       font-weight: bold;
       text-transform: uppercase;
       font-size: 14px;

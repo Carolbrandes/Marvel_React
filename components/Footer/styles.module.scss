@@ -1,0 +1,174 @@
+@import "../../styles/variables.scss";
+
+.footerBlack {
+  background: $black;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  @media screen and (min-width: $xl) {
+    padding-bottom: 1px;
+  }
+}
+
+.footerFlex {
+  @media screen and (min-width: $xl) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.boxRed {
+  background: $red;
+  color: $white;
+  font-family: Oswald;
+  text-transform: uppercase;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  display: none;
+
+  @media screen and (min-width: $xl) {
+    display: block;
+    font-size: 62px;
+    line-height: 78px;
+    padding: 40px 60px;
+    width: 408px;
+    height: 329px;
+    margin-right: 72px;
+    position: relative;
+    top: -135px;
+  }
+}
+
+.footerForm {
+  p {
+    color: $white;
+    font-family: Oswald;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    width: 274px;
+    padding-bottom: 50px;
+  }
+
+  label {
+    display: block;
+    color: $white;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footerGray {
+  background-color: $gray;
+  padding-top: 64px;
+  padding-bottom: 75px;
+}
+
+.footerFlex2 {
+  @media screen and (min-width: $xl) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.marvel {
+  background-color: $red;
+  color: $white;
+  margin-right: 60px;
+  width: 70px;
+  height: 80px;
+  padding: 10px 20px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Oswald;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $xl) {
+    margin-bottom: 0;
+  }
+}
+
+.width25 {
+  width: 25%;
+
+  @media screen and (min-width: $xl) {
+    width: 100%;
+  }
+}
+
+.widthBlog {
+  width: 60%;
+
+  @media screen and (min-width: $xl) {
+    width: 100%;
+    min-width: 250px;
+  }
+}
+
+.links {
+  margin-right: 60px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $xl) {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-family: Oswald;
+    font-size: 19px;
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  a {
+    display: block;
+    color: $gray2;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+}
+
+.blogWrapper {
+  display: flex;
+  align-items: center;
+
+  p {
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+  }
+}
+
+.imagem {
+  width: 90px;
+  height: 50px;
+  border: 1px solid $white;
+  margin-right: 10px;
+}
+
+.linkBlog {
+  color: $gray2;
+  font-size: 14px;
+  text-decoration: underline;
+  padding-top: 20px;
+}
+
+.redesSociaisWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.redesSociais {
+  margin-right: 15px;
+}

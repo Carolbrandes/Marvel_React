@@ -1,6 +1,9 @@
+@import "../../styles/variables.scss";
+
+
 .tag{
-    color: #fff;
-    background-color: #000;
+    color: $white;
+    background-color: $black;
     width: fit-content;
     padding: 5px 15px;
     border-radius: 10px 0 10px 0;

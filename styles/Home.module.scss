@@ -9,7 +9,7 @@
 }
 
 .h1 {
-  color: #fff;
+  color: $white;
   font-family: Oswald;
   font-size: 45px;
   line-height: 60px;
@@ -34,8 +34,6 @@
   }
 }
 
-
-
 .characterWrapper {
   display: flex;
   justify-content: space-between;
@@ -49,7 +47,7 @@
 }
 
 .pages {
-  color: #9b9b9b;
+  color: $gray2;
   margin-right: 30px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -57,7 +55,7 @@
 
 .pageSelected {
   background: $red;
-  color: #fff;
+  color: $white;
   width: 30px;
   height: 30px;
   line-height: 15px;

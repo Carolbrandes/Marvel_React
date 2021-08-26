@@ -37,7 +37,7 @@
 html,
 body {
   font-family: Open Sans;
-  background-color: #000;
+  background-color: $black;
 }
 
 a {
@@ -76,7 +76,7 @@ a {
 }
 
 .h2 {
-  color: #fff;
+  color: $white;
   font-family: Oswald;
   font-size: 28px;
   text-transform: uppercase;
@@ -84,7 +84,7 @@ a {
 
 .h2Black{
   @extend .h2;
-  color: #000;
+  color: $black;
   padding-bottom: 40px;
 }
 
@@ -102,9 +102,13 @@ a {
 }
 
 .text{
-  color: #9B9B9B;
+  color: $gray2;
   font-size: 20px;
   padding-bottom: 40px;
+}
+
+.textRed{
+  color: $red;
 }
 
 .section {
@@ -117,8 +121,10 @@ a {
 }
 
 .sectionWhite {
-  background-color: #fff;
+  background-color: $white;
 }
+
+
 
 
 
