@@ -78,13 +78,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className="section">
         <div className="container">
           <Carousel />
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.sectionWhite}`}>
+      <section className="section sectionWhite">
         <div className="container">
           <h2 className="h2Black">Lista de Personagens da Marvel</h2>
 
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.sectionWhite}`}>
+      <section className="section sectionWhite">
         <div className={`container ${styles.sectionMastercard}`}>
           <h2 className="h2Big">Marvel Mastercard</h2>
           <p className="text">Desbloqueie seus super poderes</p>

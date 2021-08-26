@@ -107,6 +107,19 @@ a {
   padding-bottom: 40px;
 }
 
+.section {
+  padding: 150px 0;
+  position: relative;
+
+  &:nth-child(5){
+   padding-top: 0;
+  }
+}
+
+.sectionWhite {
+  background-color: #fff;
+}
+
 
 
 
