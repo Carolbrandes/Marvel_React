@@ -36,8 +36,12 @@
 
 .characterWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+
+  @media screen and (min-width: $md){
+    justify-content: flex-start;
+  }
 }
 
 .pagesWrapper {

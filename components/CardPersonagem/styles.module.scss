@@ -1,9 +1,14 @@
 @import "../../styles/variables.scss";
 
 .personagem{
-    width: 170px;
+    width: 50%;
+    margin-right: 38.8px;
     margin-bottom: 40px;
     position: relative;
+
+    @media screen and (min-width: $md){
+      width: 150px;
+    }
 }
 
 .image{

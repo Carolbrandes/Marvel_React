@@ -2,13 +2,13 @@ import { TagMovies } from "../TagMovies"
 import styles from "./styles.module.scss"
 
 export const CardPersonagem = ({nome, foto}) => {
-    // const imgBg = {
-    //     backgroundImage: `url(${foto})`
-    // }
+    const imgBg = {
+        backgroundImage: `url(${foto})`
+    }
 
    
    return (
-       <div className={styles.personagem}>
+       <div style={imgBg} className={styles.personagem}>
            <div  className={styles.image}>
               <TagMovies />
            </div>
