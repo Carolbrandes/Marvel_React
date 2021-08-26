@@ -54,22 +54,28 @@ a {
 .container{
   width: 95%;
   margin-inline: auto;
+  
 
   @media screen and (min-width: $md) {
-    width: calc($md - 40px);
+    width: 80%;
+    max-width: 760px;
   }
 
   @media screen and (min-width: $xl) {
-    width: calc($xl - 40px);
+    max-width: 1110px;
+  }
+
+}
+
+.center-mobile{
+  text-align: center;
+
+  @media screen and (min-width: $md) {
+   text-align: left;
   }
 }
 
-.bold{
-  font-weight: bold;
-}
 
-.medium{
-  font-weight: 500;
-}
+
 
 

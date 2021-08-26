@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <nav className={`container ${styles.nav}`}>
+      <nav className={styles.nav}>
         <Link href="/">
           <img src="./images/icons/logo-marvel.svg" alt="logo Marvel" />
         </Link>
