@@ -22,6 +22,7 @@ export class Carousel extends Component {
     const settings = {
       dots: false,
       arrows: false,
+      centerMode: true,
       infinite: true,
       speed: 500,
       slidesToShow: 4,
