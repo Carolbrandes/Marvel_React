@@ -10,7 +10,7 @@ export const CardPersonagem = ({nome, foto}) => {
    return (
        <div className={styles.personagem}>
            <div  className={styles.image}>
-              
+              <TagMovies />
            </div>
            <div className={styles.nome}>
                {nome}

@@ -5,6 +5,7 @@ import { GET_CHARACTERS, GET_CHARACTERS_OFFSET } from "../api";
 
 import styles from "../styles/Home.module.scss";
 import { CardPersonagem } from "../components/CardPersonagem";
+import { Button } from "../components/Button";
 
 export default function Home() {
   const [characters, setCharacters] = useState({});
@@ -115,6 +116,18 @@ export default function Home() {
               </div>
             </>
           )}
+        </div>
+      </section>
+
+      <section className={`${styles.section} ${styles.sectionWhite}`}>
+        <div className={`container ${styles.sectionMastercard}`}>
+          <h2 className="h2Big">Marvel Mastercard</h2>
+          <p className="text">Desbloqueie seus super poderes</p>
+          <div className={styles.imgMastercard}>
+          <img src="./images/cards-fan-desktop.png" alt="#" />
+          </div>
+          <Button width={324}>Cadastre-se agora</Button>
+          <a className={styles.link} href="#">Entenda como funciona</a>
         </div>
       </section>
     </>

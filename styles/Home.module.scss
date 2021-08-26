@@ -37,6 +37,10 @@
 .section {
   padding: 150px 0;
   position: relative;
+
+  &:nth-child(5){
+   padding-top: 0;
+  }
 }
 
 .sectionWhite {
@@ -71,4 +75,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sectionMastercard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgMastercard {
+  img {
+    width: 100%;
+  }
+}
+
+.link {
+  color: $red;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
