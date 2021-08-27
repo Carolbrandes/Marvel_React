@@ -56,6 +56,11 @@
   margin-right: 30px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: .2s;
+
+  &:hover{
+    @extend .pageSelected
+  }
 }
 
 .pageSelected {
