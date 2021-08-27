@@ -10,4 +10,8 @@
       color: $gray2;
       font-size: 14px;
   }
+
+  &:focus{
+    outline: none;
+  }
 }

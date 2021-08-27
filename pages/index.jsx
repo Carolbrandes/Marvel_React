@@ -14,6 +14,7 @@ export default function Home() {
   const [totalPages, setTotalPages] = useState(0);
   const [startPage, setStartPage] = useState(0);
   const [endPage, setEndPage] = useState(5);
+  
 
   const renderPagination = (numberOfPages) => {
     if (numberOfPages > 0) {

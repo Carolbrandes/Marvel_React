@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
 import styles from "./styles.module.scss";
 
 export const Footer = () => {
+  const [email, setEmail] = useState("")
+
   return (
     <footer>
       <section className={styles.footerBlack}>
@@ -18,6 +21,8 @@ export const Footer = () => {
             <label htmlFor="email">Seu melhor e-mail</label>
             <div className={styles.inputWrapper}>
               <Input
+              value={email}
+              setValue={setEmail}
                 type="email"
                 id="email"
                 width="369px"
