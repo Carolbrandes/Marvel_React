@@ -130,7 +130,7 @@ export default function Home() {
                     {page}
                   </span>
                 ))}
-                <span onClick={getMorePages} className={styles.pages}>...</span>
+                <span onClick={getMorePages} className={styles.pagesMore}>...</span>
                <span onClick={() => getCharactersByPage(totalPages)}
                     className={`${styles.pages} ${
                       pageSelected === totalPages ? styles.pageSelected : ""
